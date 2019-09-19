@@ -87,7 +87,7 @@ spec:
           name: config
       initContainers:
       - name: check-db-ready
-        image: quay.io/fossa/fossa:release
+        image: quay.io/fossa/fossa:{{ .Values.image.tag }}
         command: ['sh', '-c',
           'until pg_isready -h database.fossa.svc.cluster.local  -p 5432;
           do echo waiting for database; sleep 60; done;']    
