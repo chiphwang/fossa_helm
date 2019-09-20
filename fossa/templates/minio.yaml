@@ -38,7 +38,7 @@ spec:
       tier: storage
       deployment: production
       role: master
-  serviceName: minio
+  serviceName: mianio
   template:
     metadata:
       labels:
@@ -57,6 +57,7 @@ spec:
         imagePullPolicy: Always
         command:
         - minio
+        - --compat
         - server
         - /data
         ports:
