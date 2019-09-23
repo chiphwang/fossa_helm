@@ -57,7 +57,7 @@ spec:
         imagePullPolicy: Always
         command:
         - minio
-        - --compat
+        - "--compat"
         - server
         - /data
         ports:
